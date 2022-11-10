@@ -2,7 +2,9 @@
 import { Box,Flex,Heading,Button,Image, SimpleGrid,Text} from '@chakra-ui/react'
 import React from 'react'
 import Categories from '../Component/Categories'
+import Footer from '../Component/Footer'
 import Navbar from '../Component/Navbar'
+import Order from '../Component/Order'
 
 const cat=[
     {src:'https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=21.88',text:'CHICKEN BUCKETS'},
@@ -18,12 +20,7 @@ const Home = () => {
   return (
     <Box>
         <Navbar/>
-        <Box h='70px' bg='black' sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <Flex >
-                    <Heading color='white'  as='h4' size ='md'>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</Heading>
-                    <Box ><Button ml='20px' color='white' bgColor='red' borderRadius='20px' w='150px' >Start Order</Button></Box>
-                </Flex>
-        </Box>
+          <Order/>
         <Box>
            <Image w='100%' src='https://images.ctfassets.net/wtodlh47qxpt/4gztBB8yAvtp6jV7JAuLD/093fddbb77a78a44a4d3d5e066c592de/KFC_Peri_Peri_Banner__1440x396px.jpg?w=954&fit=fill&fm=webp' />
         </Box>
@@ -48,6 +45,7 @@ const Home = () => {
                 </Box>
             </Box>
         </Box>
+          <Footer/>
     </Box>
   )
 }
