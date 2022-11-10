@@ -11,7 +11,7 @@ const Menu = () => {
     // console.log(Item[0])
     const [search,setsearch]=useState('')
     const [data,setdata]=useState([])
-    // console.log(data)
+    console.log(data)
     const launchref=useRef(null)
     const chickenbucketref=useRef(null)
     const biryaniref=useRef(null)
@@ -35,18 +35,20 @@ const Menu = () => {
     const gotoburgers=()=>{
         window.scrollTo({top:burgerref.current.offsetTop, behavior:'smooth'})
     }
-let count=0
+
     const handlesearch=()=>{
+        let arr=[]
         for(let i=0;i<Item.length;i++){
             for(let j=0;j<Item[i].length;j++){
                 if(Item[i][j].type===search||Item[i][j].category===search){
-                    // setdata([...data,Item[i][j]])
-                        count++
+                    arr.push(Item[i][j])
                 }
             }
         }
+        setdata(arr) 
     }
-    console.log(count)
+
+    
 
 
   return (
