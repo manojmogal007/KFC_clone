@@ -1,15 +1,16 @@
 
 import React from 'react'
 import {Box, Image,Text,Flex, Spacer} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <Box border='1px solid #dbdbdb' h='100px' sx={{alignContent:'center'}}>
     <Flex>
         <Box ml='150px' h='100px' w='20%' sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-            <Image h='25px' src='https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg'/>
-            <Text as='b'>Menu</Text>
-            <Text as='b'>Deals</Text>
+            <Link to='/'><Image h='25px' src='https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg'/></Link>
+            <Link to='/menu'><Text as='b'>Menu</Text></Link>
+            <Link to='/deals'><Text as='b'>Deals</Text></Link>
         </Box>
         <Spacer/>
         <Box mx='20px' sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
