@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <Box bg='#202124' color='white' textAlign='left' pt={200} pb={100} fontSize={14} lineHeight={7}>
+    <Box bg='#202124' color='white' textAlign='left' pt={150} pb={100} fontSize={14} lineHeight={7}>
         <Flex>
             <Box ml={40} mr={28}>
                 <Image src='https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg'/>
