@@ -1,6 +1,7 @@
 
 import { Box,Flex,Heading,Button,Image, SimpleGrid,Text} from '@chakra-ui/react'
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import Categories from '../Component/Categories'
 import Footer from '../Component/Footer'
@@ -18,18 +19,23 @@ const cat=[
 ]
 
 const Home = () => {
+const [loading,setloading]=useState(false)
+  useEffect(()=>{
+    setloading(true)
+    const id=setInterval(() => {
+      setloading(false)
+      clearInterval(id)
+    }, 1500);
+    
+  },[])
 
-  // useEffect(()=>{
-  //   const id=setInterval(() => {
-  //     return(
-  //       <Box >
-  //           <Image src='https://online.kfc.co.in/static/media/KFC_Loader_Gif.66979359.gif'/>
-  //       </Box>
-  //     )
-  //   }, 5000);
-    
-    
-  // },[])
+  if(loading){
+    return(
+          <Box  sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+              <Image src='https://online.kfc.co.in/static/media/KFC_Loader_Gif.66979359.gif'/>
+          </Box>
+        )
+  }
 
 
   return (

@@ -1,5 +1,5 @@
-import { Box,Button,Center,Heading, SimpleGrid } from '@chakra-ui/react'
-import React from 'react'
+import { Box,Button,Center,Heading, SimpleGrid,Image } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import Dealscard from '../Component/Dealscard'
 import Navbar from '../Component/Navbar'
 import Order from '../Component/Order'
@@ -9,6 +9,23 @@ import Footer from '../Component/Footer'
 
 const Deals = () => {
 
+    const [loading,setloading]=useState(false)
+  useEffect(()=>{
+    setloading(true)
+    const id=setInterval(() => {
+      setloading(false)
+      clearInterval(id)
+    }, 1500);
+    
+  },[])
+
+  if(loading){
+    return(
+          <Box  sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+              <Image src='https://online.kfc.co.in/static/media/KFC_Loader_Gif.66979359.gif'/>
+          </Box>
+        )
+  }
 
     const center={display:'block', justifyContent:'center',alignItems:'center'}
   return (
