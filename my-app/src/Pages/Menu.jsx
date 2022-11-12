@@ -1,5 +1,5 @@
-import { Box, Center, Flex, Heading, Input, SimpleGrid ,Text,Button} from '@chakra-ui/react'
-import React from 'react'
+import { Box, Center, Flex, Heading, Input, SimpleGrid ,Text,Button,Image} from '@chakra-ui/react'
+import React, { useEffect } from 'react'
 import Navbar from '../Component/Navbar'
 import Order from '../Component/Order'
 import { Item } from '../Component/Item'
@@ -17,6 +17,24 @@ const Menu = () => {
     const biryaniref=useRef(null)
     const burgerref=useRef(null)
     const boxmeals=useRef(null)
+
+    const [loading,setloading]=useState(false)
+  useEffect(()=>{
+    setloading(true)
+    const id=setInterval(() => {
+      setloading(false)
+      clearInterval(id)
+    }, 1500);
+    
+  },[])
+
+  if(loading){
+    return(
+          <Box  sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+              <Image src='https://online.kfc.co.in/static/media/KFC_Loader_Gif.66979359.gif'/>
+          </Box>
+        )
+  }
 
 
     const gotolaunch=()=>{
@@ -58,7 +76,8 @@ const Menu = () => {
         <Flex>
             <Box w='30%' sx={{dispay:'grid',position:'fixed'}} lineHeight={10} fontSize={18}>
                 <Box textAlign='left' ml='27%'>
-                    <Heading pt={20}>KFC MENU</Heading>
+                    <Box h={5} bg='#E4002B'></Box>
+                    <Heading pt={5}>KFC MENU</Heading>
                     <Text onClick={gotochickenbucket}>CHICKEN BUCKETS</Text>
                     <Text onClick={gotolaunch}>NEW LAUNCH</Text>
                     <Text onClick={gotobiryani}>BIRYANI BUCKETS</Text>
