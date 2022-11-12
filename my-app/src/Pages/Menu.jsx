@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading, Input, SimpleGrid ,Text,Button,Image} from '@chakra-ui/react'
+import { Box, Center, Flex, Heading, Input, SimpleGrid ,Text,Button,Image, InputLeftElement, InputGroup, IconButton} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import Navbar from '../Component/Navbar'
 import Order from '../Component/Order'
@@ -6,6 +6,7 @@ import { Item } from '../Component/Item'
 import Itemcard from '../Component/Itemcard'
 import { useRef } from 'react'
 import { useState } from 'react'
+import {PhoneIcon, SearchIcon} from '@chakra-ui/icons'
 
 const Menu = () => {
     // console.log(Item[0])
@@ -75,23 +76,24 @@ const Menu = () => {
         <Box ><Order/></Box>
         <Flex>
             <Box w='30%' sx={{dispay:'grid',position:'fixed'}} lineHeight={10} fontSize={18}>
-                <Box textAlign='left' ml='27%'>
+                <Box textAlign='left' ml='27%' sx={{display:'block'}}>
                     <Box h={5} bg='#E4002B'></Box>
                     <Heading pt={5}>KFC MENU</Heading>
-                    <Text onClick={gotochickenbucket}>CHICKEN BUCKETS</Text>
-                    <Text onClick={gotolaunch}>NEW LAUNCH</Text>
-                    <Text onClick={gotobiryani}>BIRYANI BUCKETS</Text>
-                    <Text onClick={gotoboxmeals}>BOX MEALS</Text>
-                    <Text onClick={gotoburgers}>BURGERS</Text>
-                    <Text></Text>
+                    <Box><Button variant='link' textDecoration='none' ><Text onClick={gotochickenbucket}>CHICKEN BUCKETS</Text></Button></Box>
+                    <Box><Button variant='link' textDecoration='none' ><Text onClick={gotolaunch}>NEW LAUNCH</Text></Button></Box>
+                    <Box><Button variant='link' textDecoration='none' ><Text onClick={gotobiryani}>BIRYANI BUCKETS</Text></Button></Box>
+                    <Box><Button variant='link' textDecoration='none' ><Text onClick={gotoboxmeals}>BOX MEALS</Text></Button></Box>
+                    <Box><Button variant='link' textDecoration='none' ><Text onClick={gotoburgers}>BURGERS</Text></Button></Box>
                 </Box>
             </Box>
             <Box w='70%'  ml='32%' mr={20} p={30} >
-                <Box>
-                    <Input onChange={(e)=>setsearch(e.target.value)}/>
-                    <Button onClick={handlesearch}>Search</Button>
+                <Box sx={{display:'flex'}}>
+                    
+                        <Input onChange={(e)=>setsearch(e.target.value)} variant='flushed' placeholder='Search our menu'/>
+                        <Button onClick={handlesearch}>Search</Button>
+                   
                 </Box>
-            <Box  bg='#F7FAFC' pb={30} pl={15} pr={15} borderRadius={10} ref={chickenbucketref}>
+            <Box  bg='#F7FAFC' pb={30} pl={15} pr={15} borderRadius={10} ref={chickenbucketref}  mt={10}>
                 <Box ml={50} h={100} sx={{display:'flex',alignItems:'center'}} textAlign='left'>
                     <Heading>CHICKEN BUCKETS</Heading>
                 </Box>
