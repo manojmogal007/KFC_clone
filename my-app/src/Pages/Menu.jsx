@@ -84,6 +84,7 @@ const Menu = () => {
                     <Box><Button variant='link' textDecoration='none' ><Text onClick={gotobiryani}>BIRYANI BUCKETS</Text></Button></Box>
                     <Box><Button variant='link' textDecoration='none' ><Text onClick={gotoboxmeals}>BOX MEALS</Text></Button></Box>
                     <Box><Button variant='link' textDecoration='none' ><Text onClick={gotoburgers}>BURGERS</Text></Button></Box>
+                    <Box></Box>
                 </Box>
             </Box>
             <Box w='70%'  ml='32%' mr={20} p={30} >
