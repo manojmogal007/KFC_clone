@@ -9,6 +9,13 @@ KFC (clone) food ordering app .Tried to clone exact UI and menu page scrolling f
    
    DataBase   : Static
    ```
+   ## Features
+
+ | Serial No            | Feature                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| 1 | Page routing |
+| 2 | Menu page click scroll functionality |
+| 3 | home,menu page |
    
    ## Steps to use code
 
@@ -20,10 +27,5 @@ KFC (clone) food ordering app .Tried to clone exact UI and menu page scrolling f
 | 4 | Open terminal and reun cammand 'npm install' (it will install all required things) |
 | 5 | Again run cammand 'npm start' |
 
-## Features
 
- | Serial No            | Feature                                                              |
-| ----------------- | ------------------------------------------------------------------ |
-| 1 | Page routing |
-| 2 | Menu page click scroll functionality |
 
