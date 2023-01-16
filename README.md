@@ -2,6 +2,8 @@
 ---
 KFC (clone) food ordering app .Tried to clone exact UI and menu page scrolling functionality  
 
+ ## Tech Stack
+
    ```
    Frontend : React JS, Chakra-UI
    
